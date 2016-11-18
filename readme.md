@@ -4,7 +4,7 @@ Coming soon...
 
 ## Branches
 
-I have created 2 branches:
+I have created 2 branches, with diffrent authentication types:
 - with <a href="https://github.com/cristake/laravel-api-starter/tree/jwt-auth">tymon/jwt-auth</a>
 - with <a href="https://github.com/cristake/laravel-api-starter/tree/laravel-passport">laravel-passport</a>
 
