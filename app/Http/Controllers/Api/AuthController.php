@@ -9,6 +9,12 @@ use Tymon\JWTAuth\JWTAuth;
 
 class AuthController extends Controller
 {
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
 	public function register(Request $request)
 	{
 	    $this->validate($request, [
@@ -26,15 +32,25 @@ class AuthController extends Controller
 	    return $user;
 	}
 
+    /**
+     * Handle a login request to the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
 	public function login(Request $request)
 	{
 	    //Retrieve user based on the credentials provided
 	    $user = $this->authenticateUser($request);
+
 	    //Generate a token for the user and return it
 	    $token = app(JWTAuth::class)->fromUser($user);
 	    return ['token' => $token];
 	}
 
+	/**
+	 * @param	$request
+	 */
 	private function authenticateUser($request)  
 	{
 	    //Validate request data
