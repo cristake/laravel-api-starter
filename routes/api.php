@@ -13,5 +13,5 @@ $api->version('v1', function ($api) {
 		});
     });
 
-    $api->resource('users', UserController::class);
+    $api->resource('users', UserController::class, ['except' => ['create', 'edit']]);
 });
