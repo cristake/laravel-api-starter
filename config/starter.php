@@ -29,7 +29,8 @@ return [
      */
     'controller' => [
         'path' => 'Http\\Controllers\\Api',
-        'extends' => 'Ralphowino\\ApiStarter\\Resources\\BaseController'
+        'extends' => 'Controller'
+        // 'extends' => 'Ralphowino\\ApiStarter\\Resources\\BaseController'
     ],
 
     /*
